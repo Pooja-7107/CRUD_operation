@@ -29,5 +29,6 @@ def update(request, id):
     return render(request, 'edit.html', {'employee': employee})  
 def destroy(request, id):  
     employee = Employee.objects.get(id=id)  
-    employee.delete()  
+    employee.delete() 
+    print("destroy") 
     return redirect("/show")  
